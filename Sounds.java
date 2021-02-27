@@ -1,0 +1,11 @@
+int[] soundSin1 = sineSound(88200, 25, 8000);
+int[] soundCos1 = cosineSound(88200, 1000,8000);
+int[] coolWave = multiplySounds(soundCos1, soundSin1);
+int[] soundCos2 = cosineSound(88200, 500,8000);
+int[] chord = addSounds(soundCos1, soundCos2);
+String pathA = "sound-files/my-soundA.wav";
+String pathB = "sound-files/my-soundB.wav";
+int[] soundA = readSound(pathA);
+int[] soundB = readSound(pathB);
+int[] soundACrop = crop(soundA, 0, 63504)
+int[] mySound = multiplySounds(soundACrop, soundB);
